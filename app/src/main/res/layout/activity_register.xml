@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+
+    tools:context=".RegisterActivity">
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_talabia" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tiName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:inputType="text"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tiEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        app:countryPreference="US,IN,NZ"
+                        app:defaultCode="965" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tiPhone"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/edPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="0123456789+"
+                            android:hint="Phone"
+                            android:inputType="phone"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tiPassword1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    app:passwordToggleEnabled="true">
+
+
+                    <EditText
+                        android:id="@+id/edPassword1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tiPassword2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Repeat Password"
+                    app:passwordToggleEnabled="true">
+
+                    <EditText
+                        android:id="@+id/edPassword2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Repeat Password"
+                        android:inputType="textPassword"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/register"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/privacy_policy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/requirement"
+                        android:textColor="@color/colorPrimaryDark" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </ScrollView>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="70dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Already have an account ?" />
+
+                <TextView
+                    android:id="@+id/tvSignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="@string/signin"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+
+    tools:context=".LoginActivity">
+
+    >
+
+    <LinearLayout
+        android:id="@+id/linLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tiEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tiPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/edPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="right"
+            android:text="Forget Password ?"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <View
+            android:id="@+id/viewLine1"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_below="@+id/linLayout1"
+            android:layout_marginBottom="10dp"
+            android:background="#bbb" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linLayout1"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.facebook.login.widget.LoginButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp" />
+
+        <com.google.android.gms.common.SignInButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.gms.common.SignInButton>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="70dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Do not have an account yet?" />
+
+                <TextView
+                    android:id="@+id/tvRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="@string/register"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.design.widget.BottomNavigationView>
+</RelativeLayout>
+

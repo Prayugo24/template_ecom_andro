@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_loyalty_black_24dp"
+            android:title="Category" />
+        <item
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/ic_stars_black_24dp"
+            android:title="Wishlist" />
+        <item
+            android:id="@+id/nav_inbox"
+            android:icon="@drawable/ic_mail_outline_black_24dp"
+            android:title="Inbox" />
+        <item
+            android:id="@+id/nav_notif"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="Notification" />
+
+        <item
+            android:id="@+id/nav_purchase"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="Purchase" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Setting" />
+        <item
+            android:id="@+id/nav_contactUs"
+            android:icon="@drawable/ic_call_black_24dp"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_keyboard_return_black_24dp"
+            android:title="Exit" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+        </menu>
+    </item>
+
+</menu>

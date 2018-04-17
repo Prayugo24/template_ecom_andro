@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.indokoding.talabia">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.ActionBar">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/register"
+            android:parentActivityName=".LoginActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProfilActivity"
+            android:label="@string/data_profil"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".SettingProfilActivity"
+            android:label="@string/setting_profil"
+            android:parentActivityName=".ProfilActivity" />
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/setting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/about"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity
+            android:name=".ContactUsActivity"
+            android:label="@string/contact_us"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CategoryActivity" />
+        <activity
+            android:name=".DetailProductActivity"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShopCartActivity"
+            android:label="@string/cart" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".InboxActivity"></activity>
+    </application>
+
+</manifest>
